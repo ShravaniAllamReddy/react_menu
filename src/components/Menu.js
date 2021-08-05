@@ -24,8 +24,8 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: '100%',
     maxHeight: '100%',
   },
-  center:{
-    textAlign:'center'
+  center: {
+    textAlign: 'center'
   }
 }));
 
@@ -34,14 +34,13 @@ export default function Menu({ items }) {
 
   return (
     <div className={classes.root}>
-      <h2 className={classes.center}> Our Menu</h2>
-      
+
       {items.map((menuItem) => {
+
         const { id, title, img, desc, price } = menuItem;
-        
+
         return (
           <Paper className={classes.paper}>
-
             <Grid container key={id} spacing={2}>
               <Grid item>
                 <ButtonBase className={classes.image}>
@@ -52,7 +51,7 @@ export default function Menu({ items }) {
                 <Grid item xs container direction="column" spacing={2}>
                   <Grid item xs>
                     <Typography gutterBottom variant="subtitle1">
-                     {title}
+                      {title}
                     </Typography>
 
                     <Typography variant="body2" color="textSecondary">
