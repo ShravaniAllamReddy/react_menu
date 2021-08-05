@@ -1,16 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
-import Navbar from './components/Navbar';
+import React, { useState } from 'react';
+import Menu from './components/Menu'
+import items from './data';
+
 
 function App() {
+
+  const [menuItems, setMenuItems] = useState(items);
+
+ 
+    // const filteredLunchItems = items.filter(item => item.category === 'lunch');
+    // const filteredBfItems = items.filter(item => item.category === 'breakfast');
+  
+
   return (
-    
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Navbar/>
-      </header>
-    </div>
+          
+        <Menu items={menuItems}/>
+        
   );
 }
 
